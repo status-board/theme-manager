@@ -3,7 +3,7 @@ version: 2
 docker_defaults: &docker_defaults
   docker:
     - image: circleci/node:8
-  working_directory: ~/project/ui
+  working_directory: ~/project/theme-manager
 
 attach_workspace: &attach_workspace
   attach_workspace:
@@ -88,13 +88,13 @@ jobs:
     <<: *test_steps
 
   test-node-10:
-    working_directory: ~/ui
+    working_directory: ~/theme-manager
     docker:
       - image: circleci/node:10
     <<: *test_steps
 
   test-node-11:
-    working_directory: ~/ui
+    working_directory: ~/theme-manager
     docker:
       - image: circleci/node:11
     <<: *test_steps
