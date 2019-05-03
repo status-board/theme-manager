@@ -38,7 +38,7 @@ install_steps: &install_steps
           - node_modules/
     - persist_to_workspace:
         root: ~/project
-        paths: ui
+        paths: theme-manager
 
 test_steps: &test_steps
   steps:
@@ -93,10 +93,10 @@ jobs:
       - image: circleci/node:10
     <<: *test_steps
 
-  test-node-11:
+  test-node-12:
     working_directory: ~/theme-manager
     docker:
-      - image: circleci/node:11
+      - image: circleci/node:12
     <<: *test_steps
 
   coverage:
@@ -121,10 +121,10 @@ jobs:
       - *attach_workspace
       - run:
           name: Build JavaScript
-          command: npm run ts:build
+          command: npm run build
       - persist_to_workspace:
           root: ~/project
-          paths: ui
+          paths: theme-manager
 
   semantic-release:
     <<: *docker_defaults
@@ -157,14 +157,14 @@ workflows:
       - test-node-10:
           requires:
             - eslint
-      - test-node-11:
+      - test-node-12:
           requires:
             - eslint
       - coverage:
           requires:
             - test-node-8
             - test-node-10
-            - test-node-11
+            - test-node-12
       - build-typescript:
           requires:
             - coverage
