@@ -54,7 +54,7 @@
     "@types/react": "16.8.16",
     "@typescript-eslint/eslint-plugin": "1.7.0",
     "@typescript-eslint/parser": "1.7.0",
-    "all-contributors-cli": "6.3.1",
+    "all-contributors-cli": "6.4.0",
     "codecov": "3.3.0",
     "commitizen": "3.1.1",
     "cz-conventional-changelog": "2.1.0",
