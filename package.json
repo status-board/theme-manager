@@ -54,7 +54,7 @@
     "@types/eslint": "4.16.6",
     "@types/jest": "24.0.13",
     "@types/lodash": "4.14.132",
-    "@types/node": "12.0.1",
+    "@types/node": "12.0.8",
     "@types/react": "16.8.18",
     "@types/semantic-release": "15.13.0",
     "@typescript-eslint/eslint-plugin": "1.9.0",
